@@ -1,0 +1,453 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+ul {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    color: rgb(148, 149, 150);
+    line-height: 1.2;
+    font-family: 'Open Sans';
+    font-size: 22px;
+
+    .up-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: blueviolet;
+        width: 65px;
+        height: 65px;
+        bottom: 30px;
+        right: 30px;
+        color: white;
+        position: fixed;
+        align-self: flex-end;
+        font-size: 26px;
+        border: none;
+        border-radius: 15px;
+        text-align: center;
+        visibility: hidden;
+    }
+}
+
+nav {
+    background-color: black;
+    width: 300px;
+    height: 100vh;
+    padding: 30px;
+    position: fixed;
+
+    .nav-image {
+        width: 120px;
+        height: 120px;
+        border: 7px solid blueviolet;
+        border-radius: 100%;
+    }
+
+    .nav-upper-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    
+        p {
+            margin: 15px 0 15px 0;
+        }
+    
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+    
+            li {
+                a {
+                    margin: 7px;
+    
+                    i {
+                        font-size: 32px;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-lower-container {
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin: 10px 0 0 15px;
+    
+        ul {
+            list-style: none;
+    
+            li {
+                margin: 30px 0 0 0;
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    text-align: center;
+                    width: 100px;
+                    text-decoration: none;
+                    color: rgb(148, 149, 150);
+    
+                    i {
+                        font-size: 22px;
+                        margin-right: 20px;
+                        color: white;
+                        width: 15px;
+                    }
+                }
+
+                a:hover{
+                    cursor: grab;
+                }
+            }
+        }
+    }
+}
+
+.main-container {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+    .presentation-page {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        padding: 75px 200px 75px 200px;
+        text-align: center;
+        background-image: url("./images/me.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        h1 {
+            width: 40%;
+            font-size: 60px;
+        }
+
+        p {
+            width: 40%;
+        }
+    }
+
+    .about-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+        height: 100vh;
+        padding: 100px 150px 100px 150px;
+        font-size: 20px;
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        .about-page-container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+
+            .about-page-image {
+                margin-right: 30px;
+                width: 400px;
+                height: 400px;
+                background-image: url("./images/me.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+
+            .about-page-description {
+                height: 400px;
+                width: 800px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                p {
+                    margin-top: 20px;
+                }
+
+                li {
+                    margin: 20px 0 20px 0;
+                }
+            
+                .about-page-info {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .skills-container {
+        padding: 75px 150px 75px 150px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        min-height: 600px;
+
+        .skills-container-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: center;
+
+            ul {
+                margin-right: 20px;
+                width: 50%;
+
+                li {
+                    width: 100%;
+                    margin: 20px 0 20px 0;
+                }
+            }
+            .bare {
+                font-size: 14px;
+                width: 100%;
+                height: 12px;
+
+                margin-top: 10px;
+            }
+
+            .bare-info {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-content: center;
+            }
+
+            .bare-container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .bare-0 {
+                    background-color: blueviolet;
+                    width: 50%;
+                }
+    
+                .bare-1 {
+                    background-color: blueviolet;
+                    width: 65%;
+                }
+
+                .empty-bare-0 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 50%;
+                }
+
+                .empty-bare-1 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 35%;
+                }
+
+                .bare-2 {
+                    background-color: blueviolet;
+                    width: 75%;
+                }
+
+                .empty-bare-2 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 25%;
+                }
+
+                .bare-3 {
+                    background-color: blueviolet;
+                    width: 40%;
+                }
+
+                .empty-bare-3 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+.color-blueviolet {
+    color: blueviolet;
+}
+
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    padding: 75px 150px 75px 150px;
+    min-height: 100vh;
+
+    .resume-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        min-height: 600px;
+
+        .resume-education-work-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+            min-height: 520px;
+            list-style: none;
+            
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: center;
+                min-height: 210px;
+            }
+            
+            .resume-education {
+                min-height: 350px;
+            }
+        }
+    }
+}
+
+.margin-bottom-12px {
+    margin-bottom: 12px;
+}
+
+.underline-blueviolet {
+    text-decoration:solid underline blueviolet;
+}
+
+
+
+.portofolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    padding: 75px 150px 75px 150px;
+    min-height: 550px;
+
+    .projects-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        
+        a {
+            width: 250px;
+            height: 250px;
+            text-align: center;
+            color: rgb(231, 231, 231);
+            border: blueviolet 3px  solid;
+            border-radius: 10px;
+        }
+
+        .project-1 {
+            background-image: url("./images/me.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 75px 150px 75px 150px;
+    min-height: 600px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 500px;
+
+        input {
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+            background-color: rgb(231, 231, 231);
+            width: 320px;
+            height: 25px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        .send-button {
+            width: 60px;
+            padding: 3px;
+            border-radius: 10px;
+            border: none;
+            background-color: blueviolet;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .message-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            min-height: 350px;
+        }
+
+        .message {
+            height: 300px;
+            width: 500px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100px;
+    background-color: blueviolet;
+    color: rgb(231, 231, 231);
+    font-size: 16px;
+}
