@@ -140,18 +140,21 @@ nav {
         width: 100%;
         padding: 75px 200px 75px 200px;
         text-align: center;
-        background-image: url("./images/me.jpg");
+        background-image: url("./images/me.jpeg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        opacity: 70%;
 
         h1 {
             width: 40%;
             font-size: 60px;
+            color: white;
         }
 
         p {
             width: 40%;
+            color: white;
         }
     }
 
