@@ -1,23 +1,24 @@
 emailjs.init('ltLJe7kfBxvGEYb_H');
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
+document.getElementById('contact-form')
+    .addEventListener('submit', function (event) {
+        event.preventDefault();
 
-  const formData = {
-    user_name: document.getElementById('name').value,
-    user_email: document.getElementById('email').value,
-    user_message: document.getElementById('message').value,
-  };
+        const formData = {
+            user_name: document.getElementById('name').value,
+            user_email: document.getElementById('email').value,
+            user_message: document.getElementById('message').value,
+        };
 
-  emailjs.send('service_lfuek7v', 'template_3otf0sg', formData)
-    .then(function(response) {
-      console.log('Email sent successfully!', response);
-      alert('Email sent successfully!');
-    }, function(error) {
-      console.error('Failed to send email:', error);
-      alert('Failed to send email.');
+        emailjs.send('service_lfuek7v', 'template_3otf0sg', formData)
+            .then(function (response) {
+                console.log('Email sent successfully!', response);
+                alert('Email sent successfully!');
+            }, function (error) {
+                console.error('Failed to send email:', error);
+                alert('Failed to send email.');
+            });
     });
-});
 
 const upButton = document.getElementById('up-button');
 
@@ -32,70 +33,70 @@ const observer = new IntersectionObserver((entires) => {
 observer.observe(document.querySelector('.footer'));
 
 window.addEventListener('scroll', (e) => {
-    if(window.scrollY > 600) {
+    if (window.scrollY > 600) {
         upButton.style.visibility = "visible";
-    } 
+    }
 
-    if (window.scrollY < 600){
+    if (window.scrollY < 600) {
         upButton.style.visibility = "hidden";
     }
 });
 
-upButton.addEventListener('click', function(event){
+upButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.presentation-page').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navHomeButton = document.querySelector(".nav-home-button");
+const navHomeButton = document.querySelector(".nav-home-button");
 
-navHomeButton.addEventListener('click', function(event){
+navHomeButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.presentation-page').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navAboutButton = document.querySelector(".nav-about-button");
+const navAboutButton = document.querySelector(".nav-about-button");
 
-navAboutButton.addEventListener('click', function(event){
+navAboutButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.about-page').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navResumeButton = document.querySelector(".nav-resume-button");
+const navResumeButton = document.querySelector(".nav-resume-button");
 
-navResumeButton.addEventListener('click', function(event){
+navResumeButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.resume-container').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navSkillsButton = document.querySelector(".nav-skills-button");
+const navSkillsButton = document.querySelector(".nav-skills-button");
 
-navSkillsButton.addEventListener('click', function(event){
+navSkillsButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.skills-container').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navPortofolioButton = document.querySelector(".nav-portofolio-button");
+const navyPortfolioButton = document.querySelector(".nav-portfolio-button");
 
-navPortofolioButton.addEventListener('click', function(event){
+navyPortfolioButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.portfolio-container').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-navContactButton = document.querySelector(".nav-contact-button");
+const navContactButton = document.querySelector(".nav-contact-button");
 
-navContactButton.addEventListener('click', function(event){
+navContactButton.addEventListener('click', function (event) {
     event.preventDefault();
     document.querySelector('.contact-container').scrollIntoView({
         behavior: 'smooth'
