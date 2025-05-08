@@ -1,19 +1,14 @@
-// Initialize EmailJS with your public key
-emailjs.init('ltLJe7kfBxvGEYb_H'); // Replace with your actual public key
+emailjs.init('ltLJe7kfBxvGEYb_H');
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Collect form data
   const formData = {
     user_name: document.getElementById('name').value,
     user_email: document.getElementById('email').value,
     user_message: document.getElementById('message').value,
   };
 
-  console.log(formData);
-
-  // Send email
   emailjs.send('service_lfuek7v', 'template_3otf0sg', formData)
     .then(function(response) {
       console.log('Email sent successfully!', response);
@@ -30,7 +25,7 @@ const observer = new IntersectionObserver((entires) => {
     if (entires[0].isIntersecting) {
         upButton.style.backgroundColor = "rgb(189, 189, 189)";
     } else {
-        upButton.style.backgroundColor = "blueviolet";
+        upButton.style.backgroundColor = "coral";
     }
 });
 
@@ -93,7 +88,7 @@ navPortofolioButton = document.querySelector(".nav-portofolio-button");
 
 navPortofolioButton.addEventListener('click', function(event){
     event.preventDefault();
-    document.querySelector('.portofolio-container').scrollIntoView({
+    document.querySelector('.portfolio-container').scrollIntoView({
         behavior: 'smooth'
     });
 });

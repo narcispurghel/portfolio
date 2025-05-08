@@ -14,16 +14,16 @@ body {
     flex-direction: row;
     justify-content: left;
     align-content: center;
-    color: rgb(148, 149, 150);
+    color: black;
     line-height: 1.2;
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', ui-serif;
     font-size: 22px;
 
     .up-button {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: blueviolet;
+        background-color: coral;
         width: 65px;
         height: 65px;
         bottom: 30px;
@@ -49,7 +49,7 @@ nav {
     .nav-image {
         width: 120px;
         height: 120px;
-        border: 7px solid blueviolet;
+        border: 7px solid coral;
         border-radius: 100%;
     }
 
@@ -59,22 +59,22 @@ nav {
         align-items: center;
         justify-content: center;
         color: white;
-    
+
         p {
             margin: 15px 0 15px 0;
         }
-    
+
         ul {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             list-style: none;
-    
+
             li {
                 a {
                     margin: 7px;
-    
+
                     i {
                         font-size: 32px;
                         color: white;
@@ -89,12 +89,12 @@ nav {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: left;
+        align-items: flex-start;
         margin: 10px 0 0 15px;
-    
+
         ul {
             list-style: none;
-    
+
             li {
                 margin: 30px 0 0 0;
 
@@ -106,11 +106,11 @@ nav {
                     width: 100px;
                     text-decoration: none;
                     color: rgb(148, 149, 150);
-    
+
                     i {
                         font-size: 22px;
                         margin-right: 20px;
-                        color: white;
+                        color: coral;
                         width: 15px;
                     }
                 }
@@ -129,40 +129,44 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
 
     .presentation-page {
         display: flex;
         flex-direction: column;
-        align-items: left;
+        align-items: flex-start;
         justify-content: center;
         height: 100vh;
         width: 100%;
         padding: 75px 200px 75px 200px;
         text-align: center;
-        background-image: url("./images/me.jpeg");
+        background-image: url("./images/main.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        opacity: 70%;
 
         h1 {
             width: 40%;
             font-size: 60px;
-            color: white;
+            color: coral;
+            position: absolute;
+            left: 53%;
+            bottom: 78%;
         }
 
         p {
             width: 40%;
-            color: white;
+            color: coral;
+            position: absolute;
+            left: 53%;
+            bottom: 75%;
         }
     }
 
     .about-page {
         display: flex;
         flex-direction: column;
-        justify-content: start;
-        align-items: left;
+        justify-content: flex-start;
+        align-items: flex-start;
         height: 100vh;
         padding: 100px 150px 100px 150px;
         font-size: 20px;
@@ -179,30 +183,43 @@ nav {
             align-items: center;
 
             .about-page-image {
+                border-radius: 10%;
+                border: 2px solid coral;
                 margin-right: 30px;
                 width: 400px;
-                height: 400px;
-                background-image: url("./images/me.jpg");
+                height: 280px;
+                background-image: url("./images/me.jpeg");
                 background-repeat: no-repeat;
                 background-size: cover;
+                opacity: 70%;
                 background-position: center;
             }
 
             .about-page-description {
-                height: 400px;
+                height: 250px;
                 width: 800px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                font-size: 16px;
 
-                p {
-                    margin-top: 20px;
+                .website-link {
+                    text-decoration: none;
+                    color: black;
+                }
+
+                a:visited {
+                    color: coral;
+                }
+
+                a:hover {
+                    color: orangered;
                 }
 
                 li {
                     margin: 20px 0 20px 0;
                 }
-            
+
                 .about-page-info {
                     display: flex;
                     flex-direction: row;
@@ -259,13 +276,8 @@ nav {
                 width: 100%;
 
                 .bare-0 {
-                    background-color: blueviolet;
+                    background-color: coral;
                     width: 50%;
-                }
-    
-                .bare-1 {
-                    background-color: blueviolet;
-                    width: 65%;
                 }
 
                 .empty-bare-0 {
@@ -275,15 +287,20 @@ nav {
                     width: 50%;
                 }
 
+                .bare-1 {
+                    background-color: coral;
+                    width: 40%;
+                }
+
                 .empty-bare-1 {
                     margin-top: 10px;
                     height: 12px;
                     background-color: gray;
-                    width: 35%;
+                    width: 60%;
                 }
 
                 .bare-2 {
-                    background-color: blueviolet;
+                    background-color: coral;
                     width: 75%;
                 }
 
@@ -295,7 +312,7 @@ nav {
                 }
 
                 .bare-3 {
-                    background-color: blueviolet;
+                    background-color: coral;
                     width: 40%;
                 }
 
@@ -305,13 +322,37 @@ nav {
                     background-color: gray;
                     width: 60%;
                 }
+
+                .bare-4 {
+                    background-color: coral;
+                    width: 40%;
+                }
+
+                .empty-bare-4 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 60%;
+                }
+
+                .bare-5 {
+                    background-color: coral;
+                    width: 50%;
+                }
+
+                .empty-bare-5 {
+                    margin-top: 10px;
+                    height: 12px;
+                    background-color: gray;
+                    width: 50%;
+                }
             }
         }
     }
 }
 
-.color-blueviolet {
-    color: blueviolet;
+.color-coral {
+    color: coral;
 }
 
 .resume-container {
@@ -336,7 +377,7 @@ nav {
             align-content: center;
             min-height: 520px;
             list-style: none;
-            
+
 
             li {
                 display: flex;
@@ -345,7 +386,7 @@ nav {
                 align-content: center;
                 min-height: 210px;
             }
-            
+
             .resume-education {
                 min-height: 350px;
             }
@@ -358,12 +399,18 @@ nav {
 }
 
 .underline-blueviolet {
-    text-decoration:solid underline blueviolet;
+    text-decoration:solid underline coral;
 }
 
+.margin-top-30px {
+    margin-top: 30px;
+}
 
+.margin-bottom-30px {
+    margin-bottom: 30px;
+}
 
-.portofolio-container {
+.portfolio-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -376,21 +423,43 @@ nav {
         flex-direction: row;
         justify-content: space-around;
         align-content: center;
-        
-        a {
-            width: 250px;
-            height: 250px;
-            text-align: center;
-            color: rgb(231, 231, 231);
-            border: blueviolet 3px  solid;
-            border-radius: 10px;
-        }
 
-        .project-1 {
-            background-image: url("./images/me.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: space-around;
+            text-align: center;
+            padding: 7px;
+            width: 250px;
+            height: 260px;
+            border: coral 3px  solid;
+            border-radius: 10px;
+
+            a {
+                margin-top: 10px;
+                text-decoration: none;
+                color: black;
+                width: 220px;
+                font-size: 18px;
+            }
+
+            a:hover {
+                color: orangered;
+                cursor: grab;
+            }
+
+            a:visited {
+                color: coral;
+            }
+
+            .project-image {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 220px;
+                height: 180px;
+            }
         }
     }
 }
@@ -401,21 +470,22 @@ nav {
     justify-content: space-around;
     padding: 75px 150px 75px 150px;
     min-height: 600px;
+    align-self: flex-start;
 
     form {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        min-height: 500px;
+        min-height: 350px;
 
         input {
-            border: 2px solid blueviolet;
-            border-radius: 10px;
+            border: 2px solid coral;
             background-color: rgb(231, 231, 231);
             width: 320px;
             height: 25px;
             border-radius: 5px;
-            font-size: 20px;
+            font-size: 14px;
+            padding: 5px;
         }
 
         .send-button {
@@ -423,7 +493,7 @@ nav {
             padding: 3px;
             border-radius: 10px;
             border: none;
-            background-color: blueviolet;
+            background-color: coral;
             color: white;
             font-weight: bold;
             font-size: 16px;
@@ -433,12 +503,16 @@ nav {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            min-height: 350px;
-        }
+            min-height: 200px;
 
-        .message {
-            height: 300px;
-            width: 500px;
+            .message {
+                border-radius: 5px;
+                margin-top: 5px;
+                border: 2px solid coral;
+                background-color: rgb(231, 231, 231);
+                font-size: 14px;
+                padding: 5px;
+            }
         }
     }
 }
@@ -450,7 +524,7 @@ nav {
     justify-content: center;
     width: 100%;
     min-height: 100px;
-    background-color: blueviolet;
-    color: rgb(231, 231, 231);
+    background-color: coral;
+    color: white;
     font-size: 16px;
 }
